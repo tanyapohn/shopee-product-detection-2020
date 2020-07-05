@@ -1,6 +1,7 @@
 # Shopee Product Detection
 
-8th place solution with a private score of `0.84720`
+8th place solution with a private score of `0.84720` on Shopee Product 
+~~Detection~~ Classification 2020 
 
 ## Setup
 Python 3.7+
