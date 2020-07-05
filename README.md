@@ -21,7 +21,7 @@ Before training/reproducing a model, you might need to customise the arguments
 in `run.sh` to fit with your environment.
 
 + `--fp16`: Set it as `True` if you want to train a model with mixed-precision.
-This requires [apex]((https://github.com/NVIDIA/apex)) to be installed
+This requires [apex](https://github.com/NVIDIA/apex) to be installed
 + `--data-path`: a path where it contains train/test.csv and image-folders
 + `--image-train-dir`: training images folder
 + `--image-test-dir`: test images folder
