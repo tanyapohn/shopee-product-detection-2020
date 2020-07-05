@@ -31,3 +31,7 @@ To train a model:
 ```
 $ bash /path/to/project/run.sh
 ```
+
+## Submission
+
+Code for submission has been written on [Kaggle Kernel](https://www.kaggle.com/moximo13/inference-shopee-resnext101-8d-swsl)
