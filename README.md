@@ -19,32 +19,13 @@ $ pip install git+https://github.com/ildoonet/pytorch-gradual-warmup-lr.git
 
 Before training/reproducing a model, you might need to customise the arguments
 in `run.sh` to fit with your environment.
-```
-#!/bin/bash
-# to activate the virtual environment, change here
-source [put your virtual environment path if you dont run it directly]
 
-for fold in 0 1 2 3;
-do
-    python -m shopee.main \
-          --backbone 'resnext101_32x8d_swsl' \
-          --image-size 256 \
-          --use-neck 0 \
-          --criterion 'ce' \
-          --fp16 False \
-          --debug 0 \
-          --data-path [a path where it contains train/test.csv and image-folders] \
-          --image-train-dir [training images folder] \
-          --image-test-dir [test images folder] \
-          --batch-size 64 \
-          --fold ${fold} \
-          --lr 7e-6 \
-          --epochs 30 \
-          --device 0 \
-          --output-dir [output dir for saving models]
-done
-
-```
++ `--fp16`: Set it as `True` if you want to train a model with mixed-precision.
+This requires [apex]((https://github.com/NVIDIA/apex)) to be installed
++ `--data-path`: a path where it contains train/test.csv and image-folders
++ `--image-train-dir`: training images folder
++ `--image-test-dir`: test images folder
++ `--output-dir`: output dir for saving models
 
 To train a model:
 ```
